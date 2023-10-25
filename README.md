@@ -46,7 +46,7 @@ and then you should create cron job for new tunneled ports. enter below command 
 
 or you can just run Qaysi one more time to set more new port to get tunneled.
 
-To check the correct operation of the script, enter the following command in the free/first server, and if successful, you should see the tunneled ports:
+<P>To check the correct operation of the script, enter the following command in the <span style="color:red">free/first</span> server, and if successful, you should see the tunneled ports:</p>
 
 ```bash
     lsof -i -P -n | grep LISTEN
