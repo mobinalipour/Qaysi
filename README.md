@@ -22,6 +22,7 @@ Just run following command on your second/censored/filtered server
 ```bash
     bash <(curl -s https://raw.githubusercontent.com/mobinalipour/Qaysi/main/Qaysi.sh)
 ```
+it is better to rebbot your server after Qaysi getting done.
     
 ## Usage
 
@@ -44,8 +45,15 @@ and then you should create cron job for new tunneled ports. enter below command 
 ```
 
 or you can just run Qaysi one more time to set more new port to get tunneled.
+
+To check the correct operation of the script, enter the following command in the free/first server, and if successful, you should see the tunneled ports:
+
+```bash
+    lsof -i -P -n | grep LISTEN
+```
+
 ## Thanks to
-Mohmmad Hossein Gholi Nasab [LINK](https://github.com/slayer76/Remote-SSH-Tunnel-Farsi)
+[Mohmmad Hossein Gholi Nasab](https://github.com/slayer76/Remote-SSH-Tunnel-Farsi)
 
 
 ## Donation
