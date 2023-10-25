@@ -1,4 +1,4 @@
-###                                                                                                 [توضیحات فارسی](https://github.com/mobinalipour/Qaysi/readme-fa.md)
+###                                                                                                 [توضیحات فارسی](https://github.com/mobinalipour/Qaysi/README-fa.md)
 # QAYSI
 
 A script for reverse tunnel between two servers
