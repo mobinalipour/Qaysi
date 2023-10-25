@@ -336,7 +336,6 @@ WantedBy=multi-user.target
 EOF
 
   systemctl daemon-reload
-  ports=("$ports")
 
   for port in "${ports[@]}"
   do
@@ -356,7 +355,7 @@ function create_service_and_tunnel() {
   if [[ "${STEP_STATUS}" -eq 0 ]]; then
     end_spin "${red}${V[010]} ${V[041]}${no_color} \n " && exit 1
   fi
-  end_spin "${green}${V[040]}${no_color}${green}${V[042]}${no_color} ${bYellow}${ports}${no_color} \n "
+  end_spin "${green}${V[040]}${no_color}${green}${V[042]}${no_color} ${bYellow}${ports[@]}${no_color} \n "
 
 }
 
