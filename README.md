@@ -21,7 +21,7 @@ The steps of implementing the reverse tunnel method are well explained in this [
 Just run following command on your second/censored/filtered server
 
 ```bash
-    bash <(curl -s https://raw.githubusercontent.com/mobinalipour/Qaysi/main/Qaysi.sh)
+bash <(curl -s https://raw.githubusercontent.com/mobinalipour/Qaysi/main/Qaysi.sh)
 ```
 it is better to rebbot your server after Qaysi getting done.
     
@@ -34,15 +34,15 @@ After running the script, it will install the required packages (sshpass), and t
 After the execution of the script, a service names qaysi will be created on your OS, which you can tunnel more ports in the future by running the following commands:
 
 ``` bash
-    systemctl start Qaysi@the_port_you_want
+systemctl start Qaysi@the_port_you_want
 ```
 ``` bash
-    systemctl enable Qaysi@the_port_you_want
+systemctl enable Qaysi@the_port_you_want
 ```
 
 and then you should create cron job for new tunneled ports. enter below command to view all other cron jobs and enter new cron job :
 ```bash
-    crontab -e
+crontab -e
 ```
 
 or you can just run Qaysi one more time to set more new port to get tunneled.
@@ -50,7 +50,7 @@ or you can just run Qaysi one more time to set more new port to get tunneled.
 To check the correct operation of the script, enter the following command in the --> free/first server <--, and if successful, you should see the tunneled ports:
 
 ```bash
-    lsof -i -P -n | grep LISTEN
+lsof -i -P -n | grep LISTEN
 ```
 
 ## Thanks to
