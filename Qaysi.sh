@@ -292,7 +292,7 @@ function user_info() {
 
 function step_ssh_to_free_server() {
 
-ssh-keygen -t rsa -f id_rsa -N '' <<< yes
+ssh-keygen -t rsa -f id_rsa -N ''
 sshpass -p $free_server_password ssh-copy-id -i ~/.ssh/id_rsa.pub $free_server_user@$free_server_ip
 
 ssh $free_server_user@$free_server_ip << EOF
