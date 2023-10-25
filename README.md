@@ -46,3 +46,8 @@ and then you should create cron job for new tunneled ports. enter below command 
 or you can just run Qaysi one more time to set more new port to get tunneled.
 ## Thanks to
 Mohmmad Hossein Gholi Nasab [LINK](https://github.com/slayer76/Remote-SSH-Tunnel-Farsi)
+
+
+## Donation
+
+Just support me by a star :)
