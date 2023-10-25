@@ -32,10 +32,10 @@ After running the script, it will install the required packages (sshpass), and t
 After the execution of the script, a service names qaysi will be created on your OS, which you can tunnel more ports in the future by running the following commands:
 
 ``` bash
-    systemctl start qaysi@the_port_you_want
+    systemctl start Qaysi@the_port_you_want
 ```
 ``` bash
-    systemctl enable qaysi@the_port_you_want
+    systemctl enable Qaysi@the_port_you_want
 ```
 
 and then you should create cron job for new tunneled ports. enter below command to view all other cron jobs and enter new cron job :
