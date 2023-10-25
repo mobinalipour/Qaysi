@@ -356,7 +356,7 @@ EOF
 function create_service_and_tunnel() {
 
   start_spin "${yellow}${V[039]}${no_color}"
-  run_step "step_ssh_to_free_server"
+  run_step "step_create_service_and_tunnel"
   if [[ "${STEP_STATUS}" -eq 0 ]]; then
     end_spin "${red}${V[010]} ${V[041]}${no_color} \n " && exit 1
   fi
