@@ -6,7 +6,7 @@ Reverse tunnel is one of the types of tunneling method between two servers and i
 
 The advantage that the reverse tunnel method provides is that it will work well if the external server or the second server is censored, and it will solve the problem of censoring the external server or the second server which is done by governments.
 
-The steps of implementing the reverse tunnel method are well explained in this link, and Qaysi was created to make all these steps faster and solve the complexity of this method for non-technical users.
+The steps of implementing the reverse tunnel method are well explained in this [link](https://github.com/slayer76/Remote-SSH-Tunnel-Farsi), and Qaysi was created to make all these steps faster and solve the complexity of this method for non-technical users.
 ## Some of the features
 
 - One command run
@@ -45,4 +45,4 @@ and then you should create cron job for new tunneled ports. enter below command 
 
 or you can just run Qaysi one more time to set more new port to get tunneled.
 ## Thanks to
-Mohmmad Hossein Gholi Nasab LINK
+Mohmmad Hossein Gholi Nasab [LINK](https://github.com/slayer76/Remote-SSH-Tunnel-Farsi)
