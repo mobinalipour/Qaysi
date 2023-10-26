@@ -1,9 +1,7 @@
 #!/bin/bash
 
-
 AUTHOR="[mobin-alipour](https://github.com/mobinalipour)"
 VERSION="1.0.0"
-
 
 #
 # DATA CREATED : 2023-10-24
@@ -11,18 +9,14 @@ VERSION="1.0.0"
 # Github : https://github.com/mobinalipour
 # Named to : Qaysi (My orange cat name)
 #
-#
 # Description : 
 #   This script starts reverse SSH tunnle between two servers.
 #   The purpose for creating is make it more easy for non tecnical users :)
 #
-#
 # Usage : bash ./Qaysi.sh
-#
 #
 # Thanks to : 
 #   [mohammad hossein gholi nasab](https://github.com/slayer76)
-#
 #
 
 
@@ -48,27 +42,22 @@ function ascii_art() {
 }
 
 
-
 # ********** Variables **********
 # General Variables
 CAN_USE_TPUT=$(command -v tput >/dev/null 2>&1 && echo "true" || echo "false")
 SPIN_TEXT_LEN=0
 SPIN_PID=
 SERVICE_NAME=Qaysi
-
 # Status Variables
 # STEP_STATUS ==>  (0: failed) | (1: success) 
 STEP_STATUS=1
-
 # OS Variables
 PKG_UPDATE=("apt -y update")
 PKG_INSTALL=("apt -y --fix-broken install sshpass")
 
 
-
 # *********** Message ***********
 declare -A V
-
 # intro
 V[000]="Thanks for using this script \n  If you found this script useful: \n  Please support me by a star on my Github! :)"
 V[001]="Version:"
@@ -128,8 +117,6 @@ function draw_line() {
 
 }
 
-
-
 function escaped_length() {
 
   # escape color from string
@@ -139,8 +126,6 @@ function escaped_length() {
 
 }
 
-
-
 function run_step() {
 
   {
@@ -148,8 +133,6 @@ function run_step() {
   } &> /dev/null
 
 }
-
-
 
 # Spinner Function
 function start_spin() {
@@ -172,16 +155,12 @@ function start_spin() {
 
 }
 
-
-
 function kill_spin() {
 
   kill "${SPIN_PID}"
   wait "${SPIN_PID}" 2>/dev/null
 
 }
-
-
 
 function end_spin() {
 
@@ -198,8 +177,6 @@ function end_spin() {
 
 }
 
-
-
 # Clean up if script terminated.
 function clean_up() {
   # Show cursor && Kill spinner
@@ -208,8 +185,6 @@ function clean_up() {
 }
 trap clean_up EXIT TERM SIGHUP SIGTERM
 
-
-
 function check_root() {
 
   start_spin "${yellow}${V[020]}${no_color}"
@@ -217,8 +192,6 @@ function check_root() {
   end_spin "${green}${V[022]}${no_color}"
 
 }
-
-
 
 function intro() {
 
@@ -245,8 +218,6 @@ ${no_color}"
 
 }
 
-
-
 function step_install_pkgs() {
 
   {
@@ -256,8 +227,6 @@ function step_install_pkgs() {
   [[ $? -ne 0 ]] && STEP_STATUS=0
 
 }
-
-
 
 function install_base_packages() {
 
@@ -269,8 +238,6 @@ function install_base_packages() {
   end_spin "${green}${V[025]}${no_color} \n "
 
 }
-
-
 
 function user_info() {
 
@@ -288,8 +255,6 @@ function user_info() {
   intro
 }
 
-
-
 function step_ssh_to_free_server() {
 
 ssh-keygen -t rsa -f /root/.ssh/id_rsa -N '' <<< yes
@@ -303,8 +268,6 @@ EOF
   [[ $? -ne 0 ]] && STEP_STATUS=0
 }
 
-
-
 function ssh_to_free_server() {
 
   start_spin "${yellow}${V[036]}${no_color}"
@@ -315,8 +278,6 @@ function ssh_to_free_server() {
   end_spin "${green}${V[037]}${no_color} \n "
 
 }
-
-
 
 function step_create_service_and_tunnel() {
 
@@ -346,8 +307,6 @@ EOF
   [[ $? -ne 0 ]] && STEP_STATUS=0
 }
 
-
-
 function create_service_and_tunnel() {
 
   start_spin "${yellow}${V[039]}${no_color}"
@@ -359,8 +318,6 @@ function create_service_and_tunnel() {
 
 }
 
-
-
 function step_set_cronjob(){
 
   for port in "${ports[@]}"
@@ -370,8 +327,6 @@ function step_set_cronjob(){
   [[ $? -ne 0 ]] && STEP_STATUS=0
 
 }
-
-
 
 function set_cronjob(){
 
@@ -383,8 +338,6 @@ function set_cronjob(){
   end_spin "${green}${V[046]}${no_color} \n "
 
 }
-
-
 
 
 
